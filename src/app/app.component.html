@@ -1,0 +1,11 @@
+<h1>hello {{title}}</h1>
+@for (  c of course; track c.id) {
+    <input [value]="title" class="demo" #inputRef (keyup)="onKeyUP(inputRef.value)"/>
+<div class="fw-bold" (click)="onLongClicked()">test</div>
+<app-course-card [course]="c" (ViewCourseEvent)="onCourseClicked($event)"
+></app-course-card>
+}@empty {
+  <h1>No Courses Found</h1>
+  
+}
+    
